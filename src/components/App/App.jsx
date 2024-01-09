@@ -68,6 +68,22 @@ function App() {
             <InfoPage />
           </ProtectedRoute>
 
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/expenses"
+          >
+            <Expenses />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/income"
+          >
+            <Income />
+          </ProtectedRoute>
+          
           <Route
             exact
             path="/login"
