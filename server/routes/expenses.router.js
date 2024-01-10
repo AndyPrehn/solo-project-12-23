@@ -15,7 +15,27 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   // POST route code here
   console.log('in expenses post', req.body)
-  res.sendStatus (201)
+  let queryText = `INSERT INTO "Expenses" ("account", "date", "status", "payee", "category", "amount")
+  VALUES ($1, $2, $3, $4, $5, $6);`;
+ 
+  pool.query(queryText, [
+      req.body.account,
+      req.body.date,
+      req.body.status,
+      req.body.payee,
+      req.body.category,
+    req.body.amount])
+      .then(result => {
+          res.sendStatus(200);
+          console.log('POST successful.');
+      })
+      .catch(error => {
+          console.error(error);
+          res.sendStatus(500);
+
+      });
 });
 
+
 module.exports = router;
+
