@@ -32,7 +32,7 @@ function Nav() {
               About
             </Link>
 
-            <Link className="navLink" to="/dashboard">
+            <Link className="navLink" to="/infoPage">
               Dashboard
             </Link>
 

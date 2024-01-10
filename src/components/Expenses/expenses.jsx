@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const ExpenseForm = () => {
-  const [description, setDescription] = useState('');
+  const [account, setAccount] = useState('');
+  const [date, setDate] = useState('');
+  const [status, setStatus] = useState('');
+  const [payee, setPayee] = useState('');
+  const [category, setCategory] = useState('');
   const [amount, setAmount] = useState('');
 
   const handleSubmit = async (e) => {
@@ -10,10 +14,14 @@ const ExpenseForm = () => {
 
     try {
       // Make a POST request to the server
-      await axios.post('http://localhost:3001/submitExpense', { description, amount });
+      await axios.post('/api/expenses', { account,date, status, payee, category, amount });
 
       // Clear form fields after submission
-      setDescription('');
+      setAccount('');
+      setDate('');
+      setStatus('');
+      setPayee('');
+      setCategory('');
       setAmount('');
     } catch (error) {
       console.error(error);
@@ -22,17 +30,17 @@ const ExpenseForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-    Account: <input value={Account} placeholder='Account Name' onChange={(e)=>setAccountName(e.target.value)}/>
+    Account: <input value={account} placeholder='Account' onChange={(e)=>setAccount(e.target.value)}/>
     <br></br>
-    Date: <input value={Date} type="date" placeholder='Date of Transaction' onChange={(e)=>setDate(e.target.value)}/>
+    Date: <input value={date} type="date" placeholder='Date of Transaction' onChange={(e)=>setDate(e.target.value)}/>
     <br></br>
-    Status: <input value={Status} placeholder='Status' onChange={(e)=>setStatus(e.target.value)}/>
+    Status: <input value={status} placeholder='Status' onChange={(e)=>setStatus(e.target.value)}/>
     <br></br>
-    Payee: <input value={Payee} placeholder='Payee' onChange={(e)=>setPayee(e.target.value)}/>
+    Payee: <input value={payee} placeholder='Payee' onChange={(e)=>setPayee(e.target.value)}/>
     <br></br>
-    Category: <input value={Category} placeholder='Catergory' onChange={(e)=>setCategory(e.target.value)}/>
+    Category: <input value={category} placeholder='Catergory' onChange={(e)=>setCategory(e.target.value)}/>
     <br></br>
-    Amount: <input value={Amount} placeholder='Amount' onChange={(e)=>setAmount(e.target.value)}/>
+    Amount: <input value={amount} placeholder='Amount' onChange={(e)=>setAmount(e.target.value)}/>
     <br></br>
     <button>Add Expense</button>
   </form>
