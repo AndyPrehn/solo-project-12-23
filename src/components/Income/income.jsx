@@ -4,8 +4,7 @@ import axios from 'axios';
 const IncomeForm = () => {
   const [account, setAccount] = useState('');
   const [date, setDate] = useState('');
-  const [status, setStatus] = useState('');
-  const [payee, setPayee] = useState('');
+  const [source, setSource] = useState('');
   const [category, setCategory] = useState('');
   const [amount, setAmount] = useState('');
 
@@ -14,13 +13,12 @@ const IncomeForm = () => {
 
     try {
       // Make a POST request to the server
-      await axios.post('/api/income', { account,date, status, payee, category, amount });
+      await axios.post('/api/income', { account,date, source, category, amount });
 
       // Clear form fields after submission
       setAccount('');
       setDate('');
-      setStatus('');
-      setPayee('');
+      setSource('');
       setCategory('');
       setAmount('');
     } catch (error) {
@@ -35,8 +33,6 @@ const IncomeForm = () => {
     Date: <input value={date} type="date" placeholder='Date of Transaction' onChange={(e)=>setDate(e.target.value)}/>
     <br></br>
     Status: <input value={status} placeholder='Status' onChange={(e)=>setStatus(e.target.value)}/>
-    <br></br>
-    Payee: <input value={payee} placeholder='Payee' onChange={(e)=>setPayee(e.target.value)}/>
     <br></br>
     Category: <input value={category} placeholder='Catergory' onChange={(e)=>setCategory(e.target.value)}/>
     <br></br>
