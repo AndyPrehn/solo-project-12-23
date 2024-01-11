@@ -32,7 +32,7 @@ const IncomeForm = () => {
     <br></br>
     Date: <input value={date} type="date" placeholder='Date of Transaction' onChange={(e)=>setDate(e.target.value)}/>
     <br></br>
-    Status: <input value={status} placeholder='Status' onChange={(e)=>setStatus(e.target.value)}/>
+    Source: <input value={source} placeholder='source' onChange={(e)=>setSource(e.target.value)}/>
     <br></br>
     Category: <input value={category} placeholder='Catergory' onChange={(e)=>setCategory(e.target.value)}/>
     <br></br>
