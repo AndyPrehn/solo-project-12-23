@@ -7,6 +7,16 @@ const router = express.Router();
  */
 router.get('/', (req, res) => {
   // GET route code here
+  console.log('This should be working');
+  const query = `SELECT * FROM "income" ORDER BY "date" DESC`;
+  pool.query(query)
+    .then( result => {
+      res.send(result.rows);
+    })
+    .catch(err => {
+      console.log('ERROR: Income not available', err);
+      res.sendStatus(500)
+    })
 });
 
 /**

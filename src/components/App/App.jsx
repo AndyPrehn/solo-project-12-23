@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import Expenses from '../Expenses/Expenses';
 import Income from '../Income/Income';
+import ExpensesList from '../ExpensesList/ExpensesList';
 
 import './App.css';
 
