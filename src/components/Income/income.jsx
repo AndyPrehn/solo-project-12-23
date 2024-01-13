@@ -34,7 +34,7 @@ const IncomeForm = () => {
     <br></br>
     Source: <input value={source} placeholder='source' onChange={(e)=>setSource(e.target.value)}/>
     <br></br>
-    Category: <input value={category} placeholder='Catergory' onChange={(e)=>setCategory(e.target.value)}/>
+    Category: <input value={category} placeholder='Category' onChange={(e)=>setCategory(e.target.value)}/>
     <br></br>
     Amount: <input value={amount} placeholder='Amount' onChange={(e)=>setAmount(e.target.value)}/>
     <br></br>
