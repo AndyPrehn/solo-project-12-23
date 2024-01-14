@@ -20,7 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import ExpensesPage from '../ExpensesPage/ExpensesPage';
-import Income from '../Income/Income';
+import Income from '../IncomePage/IncomePage';
 
 
 import './App.css';
