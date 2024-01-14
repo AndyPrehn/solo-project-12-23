@@ -19,9 +19,9 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import Expenses from '../Expenses/Expenses';
+import ExpensesPage from '../ExpensesPage/ExpensesPage';
 import Income from '../Income/Income';
-import ExpensesList from '../ExpensesList/ExpensesList';
+
 
 import './App.css';
 
@@ -76,7 +76,7 @@ function App() {
             exact
             path="/expenses"
           >
-            <Expenses />
+            <ExpensesPage />
           </ProtectedRoute>
 
           <ProtectedRoute

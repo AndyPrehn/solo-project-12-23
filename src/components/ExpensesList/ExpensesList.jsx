@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-function StatsTable() {
+function ExpensesList() {
 
     // const dispatch = useDispatch();
     // const StatsList = useSelector(store => store.statsList);
@@ -11,11 +11,12 @@ function StatsTable() {
     // const [sortedColumn, setSortedColumn] = useState('id');
 
     const columns = [
-        { id: 'account', label: 'Character' },
-        { id: 'feeling', label: 'WisdomCheck' },
-        { id: 'understanding', label: 'CharismaCheck' },
-        { id: 'support', label: 'StrengthCheck' },
-        { id: 'comments', label: 'IntelligenceCheck' },
+        { id: 'account', label: 'Account' },
+        { id: 'date', label: 'Date' },
+        { id: 'status', label: 'Status' },
+        { id: 'payee', label: 'Payee' },
+        { id: 'category', label: 'Category' },
+        { id: 'amount', label: 'Amount' },
     ];
 
     useEffect(() => {

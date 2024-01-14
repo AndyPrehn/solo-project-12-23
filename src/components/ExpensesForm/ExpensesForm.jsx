@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const ExpenseForm = () => {
+const ExpensesForm = () => {
   const [account, setAccount] = useState('');
   const [date, setDate] = useState('');
   const [status, setStatus] = useState('');
@@ -47,4 +47,4 @@ const ExpenseForm = () => {
   );
 };
 
-export default ExpenseForm;
+export default ExpensesForm;
