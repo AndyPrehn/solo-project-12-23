@@ -2,7 +2,7 @@ const incomeReducer = (state = {}, action) => {
     switch (action.type) {
       case 'SET_INCOME':
         return action.payload;
-      case 'UNSET_INCOME':
+      case 'ADD_INCOME':
         return {};
       default:
         return state;

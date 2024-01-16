@@ -26,33 +26,13 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 
 function ExpensesList() {
-    const [expensesList, setExpensesList] = useState([]);
+    const expensesList = useSelector(store=> store.expenses);
+    const dispatch=useDispatch();
+  
 
-    // const columns = [
-    //     { id: 'account', label: 'Account' },
-    //     { id: 'date', label: 'Date' },
-    //     { id: 'status', label: 'Status' },
-    //     { id: 'payee', label: 'Payee' },
-    //     { id: 'category', label: 'Category' },
-    //     { id: 'amount', label: 'Amount' },
-    // ];
-
-    useEffect(() => {
-        //make initial fetch of expenses
-        getExpensesList();
-    }, []);
-
-    function getExpensesList(){
-            axios.get('/api/expenses').then((response) => {
-                console.log('Expenses are broken', response);
-                console.log(response.data);
-                setExpensesList(response.data);
-            })
-            .catch((error) => {
-                console.log("Error in GET '/expenses inside getExpensesList", error);
-                alert("Hi, its me, Im the problem");
-            })
-        }
+   useEffect(()=> {
+dispatch({type: 'FETCH_EXPENSES'})
+   }, []);
 
 return (
     // map over the esxpenseslist array

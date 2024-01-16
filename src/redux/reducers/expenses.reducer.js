@@ -1,9 +1,7 @@
-const expensesReducer = (state = {}, action) => {
+const expensesReducer = (state = [], action) => {
     switch (action.type) {
       case 'SET_EXPENSES':
         return action.payload;
-      case 'UNSET_EXPENSES':
-        return {};
       default:
         return state;
     }

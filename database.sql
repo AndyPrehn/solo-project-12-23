@@ -10,10 +10,10 @@ CREATE TABLE "user" (
 );
 
 CREATE TABLE "Expenses" (
-	"expnese_id" SERIAL PRIMARY KEY,
+	"expense_id" SERIAL PRIMARY KEY,
 	"account" VARCHAR (200) NOT NULL,
 	"date" TIMESTAMP NOT NULL,
-	"status" BOOLEAN DEFAULT false,
+	"status" VARCHAR (500) NOT NULL,
 	"payee" VARCHAR (500) NOT NULL,
 	"category" VARCHAR (50),
 	"amount" MONEY NOT NULL
