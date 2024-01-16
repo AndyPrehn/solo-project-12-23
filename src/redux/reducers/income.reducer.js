@@ -1,9 +1,7 @@
-const incomeReducer = (state = {}, action) => {
+const incomeReducer = (state = [], action) => {
     switch (action.type) {
       case 'SET_INCOME':
         return action.payload;
-      case 'ADD_INCOME':
-        return {};
       default:
         return state;
     }

@@ -46,6 +46,20 @@ router.post('/', (req, res) => {
       });
 });
 
+router.delete('/:id', (req, res) => {
+  console.log('DELETE', req.params);
+  let queryText = `
+  DELETE FROM "Expenses" WHERE "expense_id" = $1;
+  `;
+  pool.query(queryText, [req.params.id])
+  .then(() => {
+      res.sendStatus(200);
+  }).catch((error) => {
+      console.log('Error in Delete', error);
+      res.sendStatus(500);
+  })
+});
+
 
 module.exports = router;
 

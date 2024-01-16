@@ -34,8 +34,18 @@ function ExpensesList() {
 dispatch({type: 'FETCH_EXPENSES'})
    }, []);
 
+   const removeTask = (id) => {
+    axios.delete(`/api/expenses/${id}`).then((response) => {
+        console.log(`Task id:${id} deleted`)
+        dispatch({type: 'FETCH_EXPENSES'})
+    })
+        .catch((error) => {
+            console.error("Error in DELETE '/expenses/:id' inside removeTask().", error);
+            alert("Something went wrong");
+        })
+}
 return (
-    // map over the esxpenseslist array
+    // map over the expenseslist array
         // render on the DOM using tags
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -47,6 +57,7 @@ return (
               <TableCell align="center">Payee</TableCell>
               <TableCell align="center">Category</TableCell>
               <TableCell align="center">Amount</TableCell>
+              <TableCell align="center">Delete</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -63,6 +74,7 @@ return (
                 <TableCell align="center">{row.payee}</TableCell>
                 <TableCell align="center">{row.category}</TableCell>
                 <TableCell align="center">{row.amount}</TableCell>
+                <TableCell align="center"><button onClick={() => removeTask(row.expense_id)} >Delete </button></TableCell>
             
               </TableRow>
             ))}

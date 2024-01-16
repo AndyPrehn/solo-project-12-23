@@ -26,33 +26,25 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 
 function IncomeList() {
-    const [incomeList, setIncomeList] = useState([]);
+  const incomeList = useSelector(store=> store.income);
+  const dispatch=useDispatch();
 
-    // const columns = [
-    //     { id: 'account', label: 'Account' },
-    //     { id: 'date', label: 'Date' },
-    //     { id: 'status', label: 'Status' },
-    //     { id: 'payee', label: 'Payee' },
-    //     { id: 'category', label: 'Category' },
-    //     { id: 'amount', label: 'Amount' },
-    // ];
 
     useEffect(() => {
-        //make initial fetch of expenses
-        getIncomeList();
+      dispatch({type: 'FETCH_INCOME'})
     }, []);
 
-    function getIncomeList(){
-            axios.get('/api/income').then((response) => {
-                console.log('Income is broken', response);
-                console.log(response.data);
-                setIncomeList(response.data);
-            })
-            .catch((error) => {
-                console.log("Error in GET '/expenses inside getIncomeList", error);
-                alert("Hi, its me, Im the problem");
-            })
-        }
+    const removeTask = (id) => {
+      axios.delete(`/api/income/${id}`).then((response) => {
+          console.log(`Task id:${id} deleted`)
+          dispatch({type: 'FETCH_INCOME'})
+      })
+          .catch((error) => {
+              console.error("Error in DELETE '/income/:id' inside removeTask().", error);
+              alert("Something went wrong");
+          })
+  }
+
 
 return (
     // map over the incomelist array
@@ -66,11 +58,11 @@ return (
               <TableCell align="center">Source</TableCell>
               <TableCell align="center">Category</TableCell>
               <TableCell align="center">Amount</TableCell>
+              <TableCell align="center">Delete</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {incomeList.map((row) => (
-              
               <TableRow
                 key={row.income_id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -82,6 +74,7 @@ return (
                 <TableCell align="center">{row.source}</TableCell>
                 <TableCell align="center">{row.category}</TableCell>
                 <TableCell align="center">{row.amount}</TableCell>
+                <TableCell align="center"><button onClick={() => removeTask(row.id)} >Delete </button></TableCell>
             
               </TableRow>
             ))}
