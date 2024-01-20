@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react';
+
 import {
   HashRouter as Router,
   Redirect,
   Route,
   Switch,
 } from 'react-router-dom';
-
 import { useDispatch, useSelector } from 'react-redux';
 
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -21,6 +19,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import ExpensesPage from '../ExpensesPage/ExpensesPage';
 import Income from '../IncomePage/IncomePage';
+import DashboardPage from '../DashboardPage/DashboardPage';
 
 
 import './App.css';
@@ -69,6 +68,14 @@ function App() {
             path="/info"
           >
             <InfoPage />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows DashboardPage else shows LoginPage
+            exact
+            path="/dashboard"
+          >
+            <DashboardPage />
           </ProtectedRoute>
 
           <ProtectedRoute

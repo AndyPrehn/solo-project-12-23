@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import './LandingPage.css';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import "./LandingPage.css";
 
 // CUSTOM COMPONENTS
-import RegisterForm from '../RegisterForm/RegisterForm';
+import RegisterForm from "../RegisterForm/RegisterForm";
 
 function LandingPage() {
-  const [heading, setHeading] = useState('Welcome');
+  const [heading, setHeading] = useState("Welcome");
   const history = useHistory();
 
   const onLogin = (event) => {
-    history.push('/login');
+    history.push("/login");
   };
 
   return (
@@ -20,15 +20,12 @@ function LandingPage() {
       <div className="grid">
         <div className="grid-col grid-col_8">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            id felis metus. Vestibulum et pulvinar tortor. Morbi pharetra lacus
-            ut ex molestie blandit. Etiam et turpis sit amet risus mollis
-            interdum. Suspendisse et justo vitae metus bibendum fringilla sed
-            sed justo. Aliquam sollicitudin dapibus lectus, vitae consequat odio
-            elementum eget. Praesent efficitur eros vitae nunc interdum, eu
-            interdum justo facilisis. Sed pulvinar nulla ac dignissim efficitur.
-            Quisque eget eros metus. Vestibulum bibendum fringilla nibh a
-            luctus. Duis a sapien metus.
+            This application is an expense tracker that will build a budget
+            based on your spending each month. The goal is to build the habit of
+            recording and tracking your expenses and at the end of the month
+            build your budget based on your spending. It is a habit building
+            tool to use alongside other resources to teach people to be more in
+            control of their finanaces.
           </p>
         </div>
         <div className="grid-col grid-col_4">

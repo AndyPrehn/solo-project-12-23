@@ -32,7 +32,7 @@ function Nav() {
               About
             </Link>
 
-            <Link className="navLink" to="/infoPage">
+            <Link className="navLink" to="/dashboard">
               Dashboard
             </Link>
 
@@ -42,6 +42,10 @@ function Nav() {
 
             <Link className="navLink" to="/expenses">
               Expense
+            </Link>
+
+            <Link className="navLink" to="/infoPage">
+              Info
             </Link>
 
             <LogOutButton className="navLink" />

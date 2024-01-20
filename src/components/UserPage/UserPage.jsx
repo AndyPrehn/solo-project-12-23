@@ -1,5 +1,5 @@
 import React from 'react';
-import LogOutButton from '../LogOutButton/LogOutButton';
+// import myImage from './images/MoneyTrackerHomePg.png';
 import {useSelector} from 'react-redux';
 
 // !This is where you start your work.
@@ -11,7 +11,7 @@ function UserPage() {
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
-      <LogOutButton className="btn" />
+     
     </div>
   );
 }
