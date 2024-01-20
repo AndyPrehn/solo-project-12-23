@@ -31,10 +31,10 @@ function DashboardList() {
   
 
    useEffect(()=> {
-    console.log('this should be working');
 dispatch({type: 'FETCH_DASHBOARD'})
+console.log(dashboardList, 'is dashboardList');
    }, []);
-
+  
    const removeTask = (id) => {
     axios.delete(`/api/dashboard/${id}`).then((response) => {
         console.log(`Task id:${id} deleted`)
@@ -45,45 +45,45 @@ dispatch({type: 'FETCH_DASHBOARD'})
             alert("Something went wrong");
         })
 }
-// return (
+return (
  
     // map over the expenseslist array
-        // render on the DOM using tags
-    //     <TableContainer component={Paper}>
-    //     <Table sx={{ minWidth: 650 }} aria-label="simple table">
-    //       <TableHead>
-    //         <TableRow>
-    //           <TableCell align="center"> Account </TableCell>
-    //           <TableCell align="center">Date</TableCell>
-    //           <TableCell align="center">Source</TableCell>
-    //           <TableCell align="center">Status</TableCell>
-    //           <TableCell align="center">Payee</TableCell>
-    //           <TableCell align="center">Category</TableCell>
-    //           <TableCell align="center">Amount</TableCell>
-    //           <TableCell align="center">Delete</TableCell>
-    //         </TableRow>
-    //       </TableHead>
-    //       <TableBody>
-    //         {dashboardList.map((row) => (
-    //           <TableRow
-    //             key={row.date}
-    //             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-    //           >
-    //             <TableCell component="th" scope="row">
-    //               {row.account}
-    //             </TableCell>
-    //             <TableCell align="center">{row.date}</TableCell>
-    //             <TableCell align="center">{row.source}</TableCell>
-    //             <TableCell align="center">{row.status}</TableCell>
-    //             <TableCell align="center">{row.payee}</TableCell>
-    //             <TableCell align="center">{row.category}</TableCell>
-    //             <TableCell align="center">{row.amount}</TableCell>
-    //             <TableCell align="center"><button onClick={() => removeTask(row.date)} >Remove </button></TableCell>
+    //     render on the DOM using tags
+        <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell align="center"> Account </TableCell>
+              <TableCell align="center">Date</TableCell>
+              <TableCell align="center">Source</TableCell>
+              <TableCell align="center">Status</TableCell>
+              <TableCell align="center">Payee</TableCell>
+              <TableCell align="center">Category</TableCell>
+              <TableCell align="center">Amount</TableCell>
+              <TableCell align="center">Delete</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {dashboardList.map((row) => (
+              <TableRow
+                key={row.date}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.account}
+                </TableCell>
+                <TableCell align="center">{row.date}</TableCell>
+                <TableCell align="center">{row.source}</TableCell>
+                <TableCell align="center">{row.status}</TableCell>
+                <TableCell align="center">{row.payee}</TableCell>
+                <TableCell align="center">{row.category}</TableCell>
+                <TableCell align="center">{row.amount}</TableCell>
+                <TableCell align="center"><button onClick={() => console.log(dashboardList, 'dashboardList')} >Remove </button></TableCell>
             
-    //           </TableRow>
-    //         ))}
-    //       </TableBody>
-    //     </Table>
-    //   </TableContainer>
-    // );
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    );
 }export default DashboardList;
