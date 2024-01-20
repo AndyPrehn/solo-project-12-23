@@ -13,14 +13,13 @@ import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import ExpensesPage from '../ExpensesPage/ExpensesPage';
 import Income from '../IncomePage/IncomePage';
 import DashboardPage from '../DashboardPage/DashboardPage';
-
+import InfoPage from '../InfoPage/InfoPage';
 
 import './App.css';
 
@@ -63,14 +62,6 @@ function App() {
           </ProtectedRoute>
 
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/info"
-          >
-            <InfoPage />
-          </ProtectedRoute>
-
-          <ProtectedRoute
             // logged in shows DashboardPage else shows LoginPage
             exact
             path="/dashboard"
@@ -92,6 +83,14 @@ function App() {
             path="/income"
           >
             <Income />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/infoPage"
+          >
+            <InfoPage />
           </ProtectedRoute>
           
           <Route

@@ -1,5 +1,4 @@
 import React from 'react';
-// import myImage from './images/MoneyTrackerHomePg.png';
 import {useSelector} from 'react-redux';
 
 // !This is where you start your work.
