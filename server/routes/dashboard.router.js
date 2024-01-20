@@ -9,10 +9,14 @@ router.get('/', (req, res) => {
   // GET route code here
   console.log('This should be working');
   // const query = `SELECT * FROM "Income"`;
-  const query = `SELECT "Income".*, "Expenses".*
-  FROM "Income"
-  INNER JOIN "Expenses" ON "Income".date = "Expenses".date
-  ORDER BY "Expenses".date DESC;`;
+//   const query = `SELECT "Income".*, "Expenses".*
+// FROM "Income"
+// INNER JOIN "Expenses" ON "Income".date = "Expenses".date
+// ORDER BY "Expenses".date DESC`;
+const query = `SELECT *
+FROM "Income"
+FULL OUTER JOIN "Expenses"
+ON "Income".date = "Expenses".date`;
 
   pool.query(query)
     .then( result => {

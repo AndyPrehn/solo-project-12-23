@@ -45,8 +45,10 @@ console.log(dashboardList, 'is dashboardList');
             alert("Something went wrong");
         })
 }
+<div>
+
+</div>
 return (
- 
     // map over the expenseslist array
     //     render on the DOM using tags
         <TableContainer component={Paper}>
@@ -60,7 +62,7 @@ return (
               <TableCell align="center">Payee</TableCell>
               <TableCell align="center">Category</TableCell>
               <TableCell align="center">Amount</TableCell>
-              <TableCell align="center">Delete</TableCell>
+              
             </TableRow>
           </TableHead>
           <TableBody>
@@ -78,7 +80,7 @@ return (
                 <TableCell align="center">{row.payee}</TableCell>
                 <TableCell align="center">{row.category}</TableCell>
                 <TableCell align="center">{row.amount}</TableCell>
-                <TableCell align="center"><button onClick={() => console.log(dashboardList, 'dashboardList')} >Remove </button></TableCell>
+              
             
               </TableRow>
             ))}
@@ -86,4 +88,5 @@ return (
         </Table>
       </TableContainer>
     );
+   
 }export default DashboardList;
