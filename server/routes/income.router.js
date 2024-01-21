@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
   console.log('DELETE', req.params);
   let queryText = `
-  DELETE FROM "Income" WHERE "income_id" = $1;
+  DELETE FROM "Income" WHERE "Income_id" = $1;
   `;
   pool.query(queryText, [req.params.id])
   .then(() => {

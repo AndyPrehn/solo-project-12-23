@@ -43,7 +43,7 @@ function IncomeList() {
               console.error("Error in DELETE '/income/:id' inside removeTask().", error);
               alert("Something went wrong");
           })
-  }
+  };
 
 
 return (
@@ -74,7 +74,7 @@ return (
                 <TableCell align="center">{row.source}</TableCell>
                 <TableCell align="center">{row.category}</TableCell>
                 <TableCell align="center">{row.amount}</TableCell>
-                <TableCell align="center"><button onClick={() => removeTask(row.income_id)} >Delete </button></TableCell>
+                <TableCell align="center"><button onClick={() => removeTask(row.Income_id)} >Delete </button></TableCell>
             
               </TableRow>
             ))}

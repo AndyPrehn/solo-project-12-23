@@ -53,6 +53,7 @@ const ExpensesForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+    <div id="MoneyOut">
       Account:{" "}
       <input
         value={account}
@@ -95,6 +96,7 @@ const ExpensesForm = () => {
         placeholder="Amount"
         onChange={(e) => setAmount(e.target.value)}
       />
+      </div>
       <br></br>
       <button type="submit">Add Expense</button>
     </form>

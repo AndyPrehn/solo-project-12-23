@@ -1,7 +1,9 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import './User.css';
 
 // !This is where you start your work.
+
 
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
@@ -10,7 +12,10 @@ function UserPage() {
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
-     
+      <p>
+      
+      </p>
+
     </div>
   );
 }

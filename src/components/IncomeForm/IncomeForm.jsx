@@ -42,12 +42,14 @@ const IncomeForm = () => {
   
   return (
     <form onSubmit={handleSubmit}>
+      <div id="MoneyIn">
       Account:{" "}
       <input
         value={account}
         placeholder="Account"
         onChange={(e) => setAccount(e.target.value)}
       />
+      <label></label>
       <br></br>
       Date:{" "}
       <input
@@ -77,6 +79,7 @@ const IncomeForm = () => {
         placeholder="Amount"
         onChange={(e) => setAmount(e.target.value)}
       />
+      </div>
       <br></br>
       <button>Add Income </button>
     </form>
