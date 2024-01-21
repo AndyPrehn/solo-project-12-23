@@ -49,23 +49,20 @@ function InfoPage() {
         <div className="futurePlans">
           <h3>Future Plans</h3>
           <ul>
-            <li>Add the ability to Auto pull in user accounts</li>
+            <li>Add the ability to auto pull in user accounts</li>
             <li>
-              Add a function to create an average monthly budget based on 3
-              months of data
+              Add a function that creates an average monthly budget, month over month
             </li>
-            <li>Implement category tags</li>
             <li>Switch to a game version of this app</li>
           </ul>
           <div className="thanks">
             <h3>Thanks</h3>
             <p>
-              Thanks to my family, 
-              my friends, 
-              my super supportive co-workers and leaders, 
+              Thanks to my family & friends, 
+              my co-workers and leaders, 
               Prime Digital Academy, 
-              but most importantly to the amazingly kind and supportive Taaffeite Cohort,
-              and our wickedly talented instructor Chris Black for his patience
+              the amazing and talented people in Taaffeite Cohort,
+              and our wickedly talented instructor, Chris Black, for his patience
               and guidance through this fast paced, whirlwind journey!
             </p>
           </div>

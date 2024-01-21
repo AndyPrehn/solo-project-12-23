@@ -32,16 +32,16 @@ function Nav() {
               About
             </Link>
 
-            <Link className="navLink" to="/dashboard">
-              Dashboard
-            </Link>
-
             <Link className="navLink" to="/income">
               Income
             </Link>
 
             <Link className="navLink" to="/expenses">
               Expense
+            </Link>
+
+            <Link className="navLink" to="/dashboard">
+              Budget
             </Link>
 
             <Link className="navLink" to="/infoPage">
