@@ -1,0 +1,18 @@
+.container {
+    h3 {
+        text-align: center;
+    }
+    ul {
+        margin-left: 400px;
+    }
+    p {
+        text-align: center;
+    }
+    
+}
+.futurePlans {
+    ul {
+        margin-left: 300px;
+
+    }
+}

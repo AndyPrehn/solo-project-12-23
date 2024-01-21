@@ -11,10 +11,14 @@ function UserPage() {
   return (
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
-      <p>Your ID is: {user.id}</p>
-      <p>
-      
+      <p> Congratulaions on taking your first step to financial literacy!</p>
+      <p>  With this app you will be building a lifelong habit of tracking
+          your money </p>
+          <p>  and keeping a record of where it comes from 
+          and where it goes. 
+
       </p>
+      <p>Your ID is: {user.id}</p>
 
     </div>
   );

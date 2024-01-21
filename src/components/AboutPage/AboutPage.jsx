@@ -12,10 +12,14 @@ function AboutPage() {
       <div>
         <p>
             This application is an expense tracker that will build a budget
-            based on your spending each month. The goal is to build the habit of
-            recording and tracking your expenses and at the end of the month
-            build your budget based on your spending. It is a habit building
-            tool to use alongside other resources to teach people to be more in
+            based on your spending each month.</p>
+            <p>The goal is to build the habit of
+            recording and tracking your expenses </p>
+            <p>and at the end of the month
+            build your budget based on your spending. </p>
+            <p>It is a habit building
+            tool to use alongside other resources  </p>
+            <p>to teach people to be more in
             control of their finanaces.
           </p>
       </div>
