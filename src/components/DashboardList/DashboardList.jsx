@@ -29,6 +29,14 @@ function DashboardList() {
     const dashboardList = useSelector(store=> store.dashboard);
     const dispatch=useDispatch();
   
+    const formatDate = (dateToFormat) => {
+      const newDate = new Date(dateToFormat);
+      const month = newDate.getMonth() + 1;
+      const date = newDate.getDate();
+      const year = newDate.getFullYear();
+  
+      return `${month}/${date}/${year}`;
+    };
 
    useEffect(()=> {
 dispatch({type: 'FETCH_DASHBOARD'})
@@ -74,7 +82,7 @@ return (
                 <TableCell component="th" scope="row">
                   {row.account}
                 </TableCell>
-                <TableCell align="center">{row.date}</TableCell>
+                <TableCell align="center">{formatDate(row.date)}</TableCell>
                 <TableCell align="center">{row.source}</TableCell>
                 <TableCell align="center">{row.status}</TableCell>
                 <TableCell align="center">{row.payee}</TableCell>

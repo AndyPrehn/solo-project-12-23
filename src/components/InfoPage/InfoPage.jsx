@@ -53,17 +53,17 @@ function InfoPage() {
             <li>
               Add a function that creates an average monthly budget, month over month
             </li>
-            <li>Switch to a game version of this app</li>
+            <li>Create to a game version of this app</li>
           </ul>
-          <div className="thanks">
-            <h3>Thanks</h3>
+          <div className="thankYou">
+            <h3>Thank You</h3>
             <p>
-              Thanks to my family & friends, 
-              my co-workers and leaders, 
+              I want to thank my family & friends, 
+              co-workers and leaders, 
               Prime Digital Academy, 
-              the amazing and talented people in Taaffeite Cohort,
-              and our wickedly talented instructor, Chris Black, for his patience
-              and guidance through this fast paced, whirlwind journey!
+              the amazing and supportive people in Taaffeite Cohort,
+              and our wickedly talented instructor, Chris Black, for his patient
+              guidance through this fast paced, whirlwind journey!
             </p>
           </div>
         </div>
