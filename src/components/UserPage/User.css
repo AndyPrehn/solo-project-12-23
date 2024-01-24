@@ -1,7 +1,7 @@
 
 body {
     color: ghostwhite;
-    background-image: url("/Users/andyprehn73/Taaffeite/React/solo-project-12-23/public/images/adam-nir-wTO6MWpMrJk-unsplash.jpg");
+    background-image: url("./images/adam-nir-wTO6MWpMrJk-unsplash.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
