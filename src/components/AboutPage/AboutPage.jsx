@@ -8,7 +8,7 @@ import React from 'react';
 
 function AboutPage() {
   return (
-    <div className="container">
+    <div className="flex-container">
       <div>
         <p>
             This application is a habit building expense tracker that will build a budget
@@ -21,6 +21,15 @@ function AboutPage() {
             tool to use alongside other resources  
             to teach people to be more in
             control of their finanaces.
+          </p>
+          <p>
+            The 1st goal should be to build the habit of 
+            recording your spending daily.
+            The 2nd goal should be to record you income
+            when it comes in.
+            The 3rd goal should be to look at it as a whole
+            and determine what your monthly finances look like.
+
           </p>
       </div>
     </div>
