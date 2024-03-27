@@ -25,11 +25,14 @@ function AboutPage() {
           <p>
             The 1st goal should be to build the habit of 
             recording your spending daily.
+            </p>
+            <p>
             The 2nd goal should be to record you income
             when it comes in.
+            </p>
+            <p>
             The 3rd goal should be to look at it as a whole
             and determine what your monthly finances look like.
-
           </p>
       </div>
     </div>
