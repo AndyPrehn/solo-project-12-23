@@ -31,7 +31,7 @@ function AboutPage() {
             when it comes in.
             </p>
             <p>
-            The 3rd goal should be to look at i t as a whole
+            The 3rd goal should be to look at it as a whole
             and determine what your monthly finances look like.
           </p>
       </div>
