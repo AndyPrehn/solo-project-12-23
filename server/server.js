@@ -10,8 +10,8 @@ const passport = require('./strategies/user.strategy');
 // Route includes
 const userRouter = require('./routes/user.router');
 const expensesRouter = require('./routes/expenses.router');
-const IncomeRouter = require('./routes/income.router');
-const DashboardRouter = require('./routes/dashboard.router');
+const incomeRouter = require('./routes/income.router');
+const dashboardRouter = require('./routes/dashboard.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
